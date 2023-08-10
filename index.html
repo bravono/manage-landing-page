@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Public+Sans:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Manage landing page</title>
 
@@ -16,36 +20,53 @@
 </head>
 <body>
 
-  <main>
-    <header class="header">
-      <img class="header__logo" src="./images/logo.svg" alt="" />
-      <div>
-        <ul class="list list--inline">
-          <li class="list__item">
-            <a aria-current="page" href="#">Pricing</a>
-          </li>
-          <li class="list__item">
-            <a href="#">Product</a>
-          </li>
-          <li class="list__item">
-            <a href="#">About Us</a>
-          </li>
-          <li class="list__item">
-            <a href="#">Careers</a>
-          </li>
-          <li class="list__item">
-            <a href="#">Community</a>
-          </li>
-        </ul>
-      </div>
-      <button class="btn btn__header">Get Started</button>
-    </header>
-    
-    
-    
-    
-    
-    
+  <main class="container">
+    <nav class="collapsible">
+      <header class="collapsible__header">
+        <img class="header__logo" src="./images/logo.svg" alt="" />
+        <div class="collapsible__content--inline">
+          <ul class="list--inline">
+            <li class="list__item">
+              <a aria-current="page" href="#">Pricing</a>
+            </li>
+            <li class="list__item">
+              <a href="#">Product</a>
+            </li>
+            <li class="list__item">
+              <a href="#">About Us</a>
+            </li>
+            <li class="list__item">
+              <a href="#">Careers</a>
+            </li>
+            <li class="list__item">
+              <a href="#">Community</a>
+            </li>
+          </ul>
+        </div>
+        <div class="collapsible__content--block">
+          <ul class="list">
+            <li class="list__item">
+              <a aria-current="page" href="#">Pricing</a>
+            </li>
+            <li class="list__item">
+              <a href="#">Product</a>
+            </li>
+            <li class="list__item">
+              <a href="#">About Us</a>
+            </li>
+            <li class="list__item">
+              <a href="#">Careers</a>
+            </li>
+            <li class="list__item">
+              <a href="#">Community</a>
+            </li>
+          </ul>
+        </div>
+        <button class="btn header__btn">Get Started</button>
+        <img class="header__hamburger" src="./images/icon-hamburger.svg" alt="">
+        <img class="header__close" src="./images/icon-close.svg" alt="">
+      </header>
+    </nav>
     <h1>Bring everyone together to build better products.</h1>
     <p>
       Manage makes it simple for software teams to plan day-to-day
@@ -129,13 +150,12 @@
     <input type="text">Updates in your inbox…</input>
     <button class="btn">Go</button>
 
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
     Copyright 2020. All Rights Reserved
   </main>
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script src="./main.js"></script>
 </body>
 </html>

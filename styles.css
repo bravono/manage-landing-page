@@ -1,7 +1,177 @@
 /* Basic Styles */
+body,
+html {
+  font-size: 16px;
+  font-family: "Be Vietnam Pro";
+}
 
-/* Typography */
+.container {
+  border: 3px solid gray;
+  display: flex;
+  flex-direction: column;
+}
 
-/* Lists */
+/* Collapsibles */
+.collapsible {
+  height: 100px;
+}
+
+.collapsible__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.collapsible__content--inline {
+  display: none;
+}
+
+.collapsible__content--block {
+  display: none;
+}
+
+.collapsible--expanded .header__hamburger {
+  display: none;
+}
+
+.collapsible--expanded .header__close {
+  display: block;
+  cursor: pointer;
+  width: 20px;
+}
+
+.collapsible--expanded .collapsible__content--block {
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 150px 1000px 10px hsla(0, 0%, 0%, 0.2);
+  display: block;
+  left: 5%;
+  position: absolute;
+  text-align: center;
+  top: 120%;
+  width: 90%;
+}
+
+.header__logo {
+  padding-top: 5px;
+  width: 100px;
+}
+
+.header__btn {
+  display: none;
+}
+
+.header__hamburger {
+  display: block;
+  cursor: pointer;
+  width: 20px;
+}
+
+.header__close {
+  display: none;
+}
 
 /* Links */
+.list__item > a {
+  text-decoration: none;
+  color: #000;
+  transition: color 1s;
+}
+
+.list__item > a:hover {
+  color: #999;
+}
+
+/* List */
+.list {
+  padding: 0 20px;
+  list-style: none;
+  margin: 40px;
+}
+
+.list__item {
+  margin: 20px;
+}
+
+@media screen and (min-width: 737px) {
+  .container {
+    border: 3px solid gray;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(6, 16.6%);
+  }
+
+  /* Collapsibles */
+
+  .collapsible {
+    border: 1px solid dodgerblue;
+    display: flex;
+    grid-column: 1 / 3;
+    justify-content: center;
+  }
+
+  .collapsible__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4rem;
+    width: 100%;
+  }
+
+  .collapsible__content--inline {
+    display: block;
+  }
+
+  .collapsible__content--block {
+    display: none;
+  }
+
+  .collapsible--expanded .header__close {
+    display: none;
+  }
+
+  .collapsible--expanded .collapsible__content--block {
+    display: none;
+  }
+
+  .header__hamburger {
+    display: none;
+  }
+
+  .btn {
+    background: hsl(13, 100%, 75%);
+    border-radius: 30px;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    cursor: pointer;
+  }
+
+  .header__btn {
+    display: block;
+  }
+
+  /* Typography */
+
+  /* Lists */
+
+  .list--inline .list__item {
+    display: inline-block;
+    list-style: none;
+    padding-left: 0;
+    margin: 10px;
+  }
+
+  /* Links */
+  .list__item > a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.5s;
+  }
+
+  .list__item > a:hover {
+    color: #999;
+  }
+}
