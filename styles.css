@@ -1,14 +1,104 @@
 /* Basic Styles */
 body,
 html {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Be Vietnam Pro";
+}
+
+p {
+  line-height: 25px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 27px;
+}
+
+h3 {
+  margin: 0;
+}
+
+span {
+  display: flex;
+  width: 65px;
+  height: 35px;
+  border-radius: 30px;
+  background-color: hsl(13, 100%, 65%);
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  margin-right: 10px;
 }
 
 .container {
   border: 3px solid gray;
   display: flex;
   flex-direction: column;
+}
+
+.illustration-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration {
+  width: 300px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid dodgerblue;
+  padding: 0 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-2 {
+  padding: 0 10px;
+}
+
+.section__article {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid dodgerblue; */
+  margin-bottom: 30px;
+}
+
+.section__header {
+  display: flex;
+  align-items: center;
+  background-color: hsl(13, 100%, 96%);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  width: 105%;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid dodgerblue;
+}
+
+.article {
+  border: 1px solid tomato;
+}
+
+.btn {
+  background: hsl(13, 100%, 65%);
+  border-radius: 30px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 /* Collapsibles */
@@ -96,6 +186,12 @@ html {
 }
 
 @media screen and (min-width: 737px) {
+  body,
+  html {
+    font-size: 16px;
+    font-family: "Be Vietnam Pro";
+  }
+
   .container {
     border: 3px solid gray;
     display: grid;
