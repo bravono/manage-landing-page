@@ -1,35 +1,41 @@
+:root {
+  --padding-sides: 0 2rem;
+}
 /* Basic Styles */
-body,
 html {
-  font-size: 14px;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
   font-family: "Be Vietnam Pro";
 }
 
 span {
   display: flex;
-  width: 65px;
-  height: 35px;
-  border-radius: 30px;
+  width: 6.5rem;
+  height: 3rem;
+  border-radius: 3rem;
   background-color: hsl(13, 100%, 65%);
   color: white;
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  margin-right: 10px;
+  margin-right: 1rem;
 }
 
 /* Typography */
 p {
-  line-height: 25px;
+  line-height: 2.5rem;
 }
 
 h1 {
   margin: 0;
-  font-size: 30px;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 27px;
+  font-size: 2.7rem;
 }
 
 h3 {
@@ -44,22 +50,25 @@ h3 {
 .container {
   border: 1px solid tomato;
   text-align: center;
+  padding: var(--padding-sides);
 }
 
 .btn {
   background: hsl(13, 100%, 65%);
-  border-radius: 30px;
+  border-radius: 3rem;
   border: none;
   color: white;
-  padding: 15px 30px;
+  padding: 1.5rem 3rem;
   cursor: pointer;
-  box-shadow: 0 5px 10px hsla(13, 100%, 65%, 0.5);
+  box-shadow: 0 0.5rem 1rem hsla(13, 100%, 65%, 0.5);
 }
 
 @media screen and (min-width: 1024px) {
-  body,
   html {
-    font-size: 16px;
+    font-size: 62.5%;
+  }
+
+  body {
     font-family: "Be Vietnam Pro";
   }
 
@@ -68,17 +77,17 @@ h3 {
 
   .btn {
     background: hsl(13, 100%, 75%);
-    border-radius: 30px;
+    border-radius: 3rem;
     border: none;
     color: white;
-    padding: 10px 30px;
+    padding: 1rem 3rem;
     cursor: pointer;
   }
 }
 
 /* Collapsibles */
 .collapsible {
-  height: 100px;
+  height: 10rem;
   border: 1px solid dodgerblue;
 }
 
@@ -86,7 +95,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 20px;
+  padding: 3rem 2rem;
   position: relative;
 }
 
@@ -105,13 +114,13 @@ h3 {
 .collapsible--expanded .header__close {
   display: block;
   cursor: pointer;
-  width: 20px;
+  width: 2rem;
 }
 
 .collapsible--expanded .collapsible__content--block {
   background: white;
-  border-radius: 3px;
-  box-shadow: 0 150px 1000px 10px hsla(0, 0%, 0%, 0.2);
+  border-radius: 0.3rem;
+  box-shadow: 0 15rem 100rem 1rem hsla(0, 0%, 0%, 0.2);
   display: block;
   left: 5%;
   position: absolute;
@@ -155,8 +164,8 @@ h3 {
 
 /* Header */
 .header__logo {
-  padding-top: 5px;
-  width: 100px;
+  padding-top: 0.5rem;
+  width: 10rem;
 }
 
 .header__btn {
@@ -166,7 +175,7 @@ h3 {
 .header__hamburger {
   display: block;
   cursor: pointer;
-  width: 20px;
+  width: 2rem;
 }
 
 .header__close {
@@ -191,7 +200,7 @@ h3 {
 }
 
 .illustration {
-  width: 300px;
+  width: 30rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -205,39 +214,48 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 30px;
-  margin-bottom: 30px;
+  margin: 3rem 0;
+}
+
+.article-1 {
+  margin-bottom: 3rem;
+  padding: var(--padding-sides);
   text-align: center;
 }
 
-@media screen and (min-width: 1024) {
+.article-2 {
+  padding: 0 1rem;
+  text-align: left;
+}
+
+@media screen and (min-width: 1024px) {
   .section-1 {
   }
 }
 
 .article-2 {
-  padding: 0 10px;
+  padding: 0 1rem;
 }
 
 .section__article {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 
 .section__header {
   display: flex;
   align-items: center;
   background-color: hsl(13, 100%, 96%);
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
   width: 105%;
 }
 
 .testimonial {
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 3rem;
   border: 1px solid dodgerblue;
 }
 
@@ -246,7 +264,7 @@ h3 {
 }
 
 .section-3 {
-  padding: 30px;
+  padding: 3rem;
   border: 1px solid tomato;
   background-color: hsl(13, 100%, 65%);
   color: white;
@@ -254,11 +272,11 @@ h3 {
 }
 
 .section-3__heading {
-  font-size: 33px;
+  font-size: 3.3rem;
 }
 
 .footer {
-  padding: 30px;
+  padding: 3rem;
   border: 1px solid dodgerblue;
 }
 
@@ -275,13 +293,13 @@ h3 {
 
 /* List */
 .list {
-  padding: 0 20px;
+  padding: 0 2rem;
   list-style: none;
-  margin: 40px;
+  margin: 4rem;
 }
 
 .list__item {
-  margin: 20px;
+  margin: 2rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -293,7 +311,7 @@ h3 {
     display: inline-block;
     list-style: none;
     padding-left: 0;
-    margin: 10px;
+    margin: 1rem;
   }
 
   /* Links */
