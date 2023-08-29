@@ -1,7 +1,8 @@
 :root {
-  --padding-sides: 0 10rem;
-  --color-primary: hsl(9, 97%, 70%);
-  --marging-vertical: 4rem 0;
+  --padding-horizontal: 0 10rem;
+  --color-primary: #f3603c;
+  --color-secondary: hsl(12, 88%, 59%);
+  --marging-vertical: 10rem 0;
 }
 /* Basic Styles */
 html {
@@ -34,7 +35,7 @@ body {
 }
 
 p {
-  line-height: 2.5rem;
+  line-height: 2.5;
 }
 
 h1 {
@@ -52,12 +53,13 @@ h3 {
 
 @media screen and (min-width: 768px) {
   p {
+    line-height: 1.5;
   }
 }
 
 @media screen and (min-width: 1440px) {
   body {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   h1 {
@@ -66,6 +68,12 @@ h3 {
 
   p {
     line-height: 1.5;
+  }
+
+  span {
+    width: 7rem;
+    height: 4rem;
+    margin-right: 3rem;
   }
 }
 
@@ -175,9 +183,8 @@ h3 {
 
 /* Main */
 .main {
-  border: 1px solid tomato;
   text-align: center;
-  padding: var(--padding-sides);
+  padding: var(--padding-horizontal);
 }
 
 .main__illustration {
@@ -191,7 +198,7 @@ h3 {
 }
 
 .btn {
-  background: var(--color-primary);
+  background: var(--color-secondary);
   border-radius: 3rem;
   border: none;
   color: white;
@@ -209,22 +216,21 @@ h3 {
     display: flex;
     flex-direction: row-reverse;
     margin: var(--marging-vertical);
+    border: 3px solid tomato;
   }
 
   .main__content {
     align-items: start;
-    border: 1px solid dodgerblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem 0rem 2rem 0;
+    padding: 2rem 10rem 2rem 0;
     text-align: left;
-    width: 50%;
+    width: 60.8rem;
   }
 
   .main__illustration {
-    border: 1px solid tomato;
-    width: 80%;
+    width: 60.8rem;
   }
 
   .illustration {
@@ -232,18 +238,22 @@ h3 {
   }
 
   .btn {
-    background: var(--color-primary);
+    background: var(--color-secondary);
     border-radius: 3rem;
     border: none;
     color: white;
     padding: 1rem 3rem;
     cursor: pointer;
   }
+
+  .btn-merging {
+    margin: 2rem 0;
+  }
 }
 
 /* Section 1 */
 .section-1 {
-  border: 1px solid dodgerblue;
+  border: 3px solid dodgerblue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -252,7 +262,7 @@ h3 {
 
 .article-1 {
   margin-bottom: 3rem;
-  padding: var(--padding-sides);
+  padding: var(--padding-horizontal);
   text-align: center;
 }
 
@@ -261,22 +271,13 @@ h3 {
   text-align: left;
 }
 
-@media screen and (min-width: 1440px) {
-  .section-1 {
-  }
-}
-
-.article-2 {
-  padding: 0 1rem;
-}
-
-.section__article {
+.article-2__article {
   display: flex;
   flex-direction: column;
   margin-bottom: 3rem;
 }
 
-.section__header {
+.article-2__article__header {
   display: flex;
   align-items: center;
   background-color: hsl(13, 100%, 96%);
@@ -285,15 +286,43 @@ h3 {
   width: 105%;
 }
 
+@media screen and (min-width: 1440px) {
+  .section-1 {
+    align-items: start;
+    flex-direction: row;
+    margin: var(--marging-vertical);
+    padding: var(--padding-horizontal);
+  }
+
+  .article-1 {
+    text-align: left;
+    padding: 0 10rem 0 0;
+    width: 60.8rem;
+  }
+
+  .article-1__heading {
+    font-size: 4rem;
+  }
+
+  .article-2 {
+    width: 60.8rem;
+    padding: 0;
+  }
+
+  .article-2__article__header {
+    background-color: white;
+  }
+
+  .article-2__article__content {
+    padding-left: 10rem;
+  }
+}
+
 .testimonial {
   display: flex;
   flex-direction: column;
   padding: 3rem;
   border: 1px solid dodgerblue;
-}
-
-.article {
-  border: 1px solid tomato;
 }
 
 .section-3 {
