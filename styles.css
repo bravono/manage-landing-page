@@ -1,8 +1,12 @@
 :root {
-  --padding-horizontal: 0 10rem;
+  --font-color-primary: hsl(227, 12%, 61%);
+  --padding-horizontal-primary: 0 1rem;
+  --padding-horizontal-secondary: 0 10rem;
   --color-primary: #f3603c;
   --color-secondary: hsl(12, 88%, 59%);
-  --marging-vertical: 10rem 0;
+  --margin-vertical-primary: 10rem 0;
+  --margin-vertical-secondary: 10rem 0;
+  --margin-horizontal-primary: 0 1rem;
 }
 /* Basic Styles */
 html {
@@ -13,13 +17,12 @@ body {
   font-family: "Be Vietnam Pro", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
-  border: 3px solid gray;
 }
 
 span {
   display: flex;
-  width: 6.5rem;
-  height: 3rem;
+  width: 6rem;
+  height: 3.5rem;
   border-radius: 3rem;
   background-color: var(--color-primary);
   color: white;
@@ -35,20 +38,17 @@ body {
 }
 
 p {
-  line-height: 2.5;
+  line-height: 2;
+  color: var(--font-color-primary);
 }
 
 h1 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 h2 {
   font-size: 2.7rem;
-}
-
-h3 {
-  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -184,7 +184,10 @@ h3 {
 /* Main */
 .main {
   text-align: center;
-  padding: var(--padding-horizontal);
+  padding: var(--padding-horizontal-primary);
+  border: 3px solid tomato;
+  margin: var(--margin-vertical-primary);
+  margin-top: 0;
 }
 
 .main__illustration {
@@ -201,10 +204,12 @@ h3 {
   background: var(--color-secondary);
   border-radius: 3rem;
   border: none;
-  color: white;
-  padding: 1.5rem 3rem;
-  cursor: pointer;
   box-shadow: 0 0.5rem 1rem hsla(13, 100%, 65%, 0.5);
+  color: white;
+  cursor: pointer;
+  height: 5rem;
+  padding: 0 3rem;
+  font-weight: 700;
 }
 
 @media screen and (min-width: 1440px) {
@@ -215,7 +220,7 @@ h3 {
   .main {
     display: flex;
     flex-direction: row-reverse;
-    margin: var(--marging-vertical);
+    margin: var(--margin-vertical-secondary);
     border: 3px solid tomato;
   }
 
@@ -244,9 +249,12 @@ h3 {
     color: white;
     padding: 1rem 3rem;
     cursor: pointer;
+    border: 1px solid white;
+    height: 5rem;
+    padding: 0 4rem;
   }
 
-  .btn-merging {
+  .btn--margin {
     margin: 2rem 0;
   }
 }
@@ -257,13 +265,18 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3rem 0;
+  margin: var(--margin-vertical-primary);
+  padding: var(--padding-horizontal-primary);
 }
 
 .article-1 {
   margin-bottom: 3rem;
-  padding: var(--padding-horizontal);
+  padding: var(--padding-horizontal-primary);
   text-align: center;
+}
+
+.article-1__heading {
+  font-size: 2.8rem;
 }
 
 .article-2 {
@@ -283,15 +296,20 @@ h3 {
   background-color: hsl(13, 100%, 96%);
   border-top-left-radius: 3rem;
   border-bottom-left-radius: 3rem;
-  width: 105%;
+  width: 110%;
+}
+
+.article-2__article__heading {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 @media screen and (min-width: 1440px) {
   .section-1 {
     align-items: start;
     flex-direction: row;
-    margin: var(--marging-vertical);
-    padding: var(--padding-horizontal);
+    margin: var(--margin-vertical-secondary);
+    padding: var(--padding-horizontal-secondary);
   }
 
   .article-1 {
@@ -313,6 +331,10 @@ h3 {
     background-color: white;
   }
 
+  .article-2__article__heading {
+    font-size: 2rem;
+  }
+
   .article-2__article__content {
     padding-left: 10rem;
   }
@@ -322,27 +344,87 @@ h3 {
   display: flex;
   flex-direction: column;
   padding: 3rem;
-  border: 1px solid dodgerblue;
+  border: 3px solid tomato;
+  margin: var(--margin-vertical-primary);
+}
+
+@media screen and (min-width: 1440px) {
+  .testimonial {
+    border: 3px solid tomato;
+    margin: var(--margin-vertical-secondary);
+  }
 }
 
 .section-3 {
-  padding: 3rem;
-  border: 1px solid tomato;
+  padding: 10rem 4rem;
+  border: 3px solid dodgerblue;
   background-color: var(--color-primary);
   color: white;
   text-align: center;
+  margin: var(--margin-vertical-primary);
+  margin-bottom: 0;
 }
 
 .section-3__heading {
   font-size: 3.3rem;
 }
 
+.btn--white {
+  background-color: white;
+  color: var(--color-primary);
+}
+
+@media screen and (min-width: 1440px) {
+  .section-3 {
+    align-items: center;
+    display: flex;
+    border: 3px solid tomato;
+    margin: var(--margin-vertical-secondary);
+    margin-bottom: 0;
+    justify-content: space-between;
+    padding: var(--padding-horizontal-secondary);
+  }
+
+  .section-3__header {
+    width: 60.8rem;
+    text-align: left;
+  }
+
+  .section-3__heading {
+    font-size: 5rem;
+  }
+
+  .btn--white {
+    background-color: white;
+    color: var(--color-primary);
+  }
+}
+
 .footer {
   padding: 3rem;
-  border: 1px solid dodgerblue;
+  background-color: #000;
+  color: var(--font-color-primary);
+  text-align: center;
+}
+
+input {
+  height: 5rem;
+  border-radius: 3rem;
+  border: 1px solid black;
+  padding: 0 2rem;
+  background-color: white;
+  color: var(--font-color-primary);
+}
+
+.btn__footer {
+  box-shadow: none;
+}
+
+@media screen and (min-width: 1440px) {
 }
 
 /* Links */
+
 .list__item > a {
   text-decoration: none;
   color: #000;
@@ -362,6 +444,25 @@ h3 {
 
 .list__item {
   margin: 2rem;
+}
+
+.list__footer {
+  column-count: 2;
+  padding: 2rem 0;
+  line-height: 2;
+  text-align: left;
+}
+
+.footer .list {
+  margin: 0;
+}
+
+.footer .list__item {
+  margin: 0;
+}
+
+.footer .list__item > a {
+  color: white;
 }
 
 @media screen and (min-width: 1440px) {
@@ -386,4 +487,19 @@ h3 {
   .list__item > a:hover {
     color: #999;
   }
+}
+
+.social-icons {
+  display: flex;
+  border: 1px solid white;
+  justify-content: space-between;
+  padding: var(--padding-horizontal-primary);
+}
+
+.social-icon {
+  width: 10rem;
+}
+
+.footer__logo {
+  fill: white;
 }
