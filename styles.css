@@ -19,7 +19,7 @@ body {
     sans-serif;
 }
 
-span {
+.number {
   display: flex;
   width: 6rem;
   height: 3.5rem;
@@ -70,7 +70,7 @@ h2 {
     line-height: 1.5;
   }
 
-  span {
+  .number {
     width: 7rem;
     height: 4rem;
     margin-right: 3rem;
@@ -407,6 +407,11 @@ h2 {
   text-align: center;
 }
 
+.footer__group {
+  display: flex;
+  justify-content: space-between;
+}
+
 input {
   height: 5rem;
   border-radius: 3rem;
@@ -416,7 +421,7 @@ input {
   color: var(--font-color-primary);
 }
 
-.btn__footer {
+.btn--footer {
   box-shadow: none;
 }
 
@@ -449,8 +454,9 @@ input {
 .list__footer {
   column-count: 2;
   padding: 2rem 0;
-  line-height: 2;
+  line-height: 2.5;
   text-align: left;
+  font-size: 1.3rem;
 }
 
 .footer .list {
@@ -491,15 +497,19 @@ input {
 
 .social-icons {
   display: flex;
-  border: 1px solid white;
+  padding: 1rem 0;
+  margin-bottom: 3rem;
   justify-content: space-between;
-  padding: var(--padding-horizontal-primary);
 }
 
-.social-icon {
-  width: 10rem;
+.icon {
+  font-size: 3rem;
+  color: white;
 }
 
 .footer__logo {
   fill: white;
+}
+
+@media screen and (min-width: 1440px) {
 }
