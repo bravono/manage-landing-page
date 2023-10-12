@@ -58,7 +58,7 @@ h2 {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
   }
@@ -119,9 +119,10 @@ h2 {
   text-align: center;
   top: 120%;
   width: 90%;
+  font-weight: 700;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .collapsible {
     display: flex;
     justify-content: center;
@@ -136,7 +137,7 @@ h2 {
   }
 
   .collapsible__content--inline {
-    display: none;
+    display: inline-block;
   }
 
   .collapsible__content--block {
@@ -149,6 +150,68 @@ h2 {
 
   .collapsible--expanded .collapsible__content--block {
     display: none;
+  }
+}
+
+/* Links */
+
+.list__item > a {
+  text-decoration: none;
+  color: #000;
+  transition: color 1s;
+}
+
+.list__item > a:hover {
+  color: #999;
+}
+
+/* List */
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 4rem;
+}
+
+.list .list__item {
+  padding-left: 0;
+  margin: 3rem;
+}
+
+.list--inline .list__item {
+  list-style: none;
+  padding-left: 0;
+  display: inline-block;
+  margin-right: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  /* Lists */
+  .list {
+    list-style: none;
+    margin: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .list--inline .list__item {
+    padding-left: 0;
+    display: inline-block;
+    margin-right: 4rem;
+  }
+
+  .list .list__item {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  /* Links */
+  .list__item > a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.5s;
+  }
+
+  .list__item > a:hover {
+    color: #999;
   }
 }
 
@@ -172,7 +235,7 @@ h2 {
   display: none;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .header__hamburger {
     display: none;
   }
@@ -196,6 +259,10 @@ h2 {
   justify-content: center;
 }
 
+.main__content {
+  margin: var(--margin-horizontal-primary);
+}
+
 .illustration {
   width: 30rem;
 }
@@ -212,7 +279,7 @@ h2 {
   font-weight: 700;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   html {
     font-size: 62.5%;
   }
@@ -268,7 +335,7 @@ h2 {
 }
 
 .article-1 {
-  margin-bottom: 3rem;
+  margin: var(--margin-horizontal-primary);
   padding: var(--padding-horizontal-primary);
   text-align: center;
 }
@@ -285,7 +352,7 @@ h2 {
 .article-2__article {
   display: flex;
   flex-direction: column;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 }
 
 .article-2__article__header {
@@ -302,7 +369,7 @@ h2 {
   margin: 0;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .section-1 {
     align-items: start;
     flex-direction: row;
@@ -371,7 +438,7 @@ h2 {
   left: 42%;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .testimonial {
     margin: var(--margin-vertical-secondary);
   }
@@ -402,7 +469,7 @@ h2 {
   color: var(--color-primary);
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .section-3 {
     align-items: center;
     display: flex;
@@ -455,10 +522,12 @@ input {
 
 .list__footer {
   column-count: 2;
+  column-gap: 5rem;
   line-height: 2.5;
-  text-align: left;
   margin: 2rem 0;
   font-size: 1.5rem;
+  text-align: left;
+  padding: 0 4rem;
 }
 
 .footer .list {
@@ -467,6 +536,8 @@ input {
 
 .footer .list__item {
   margin: 0;
+  font-size: 1.2rem;
+  padding: 0;
 }
 
 .footer .list__item > a {
@@ -489,7 +560,7 @@ input {
   fill: white;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .footer {
     background-color: #000;
     color: var(--font-color-primary);
@@ -551,48 +622,5 @@ input {
   .footer__logo {
     fill: white;
     margin-bottom: 6rem;
-  }
-}
-
-/* Links */
-
-.list__item > a {
-  text-decoration: none;
-  color: #000;
-  transition: color 1s;
-}
-
-.list__item > a:hover {
-  color: #999;
-}
-
-/* List */
-.list {
-  padding: 0 2rem;
-  list-style: none;
-  margin: 4rem;
-}
-
-.list__item {
-  margin: 2rem;
-}
-
-@media screen and (min-width: 1440px) {
-  /* Lists */
-  .list .list__item {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-  }
-
-  /* Links */
-  .list__item > a {
-    text-decoration: none;
-    color: #000;
-    transition: color 0.5s;
-  }
-
-  .list__item > a:hover {
-    color: #999;
   }
 }
