@@ -179,7 +179,7 @@ h2 {
 
 .list--inline .list__item {
   list-style: none;
-  padding-left: 0;
+  padding-right: 3rem;
   display: inline-block;
   margin-right: 4rem;
 }
@@ -600,11 +600,15 @@ input {
 
   .list__footer {
     column-count: 2;
-    column-gap: 10rem;
+    column-gap: 20rem;
     line-height: 2.5;
     text-align: left;
     margin: var(--footer-content-margin-secondary);
     font-size: inherit;
+  }
+
+  .footer .list__item > a:hover {
+    color: var(--color-primary);
   }
 
   .social-icons {
@@ -617,6 +621,11 @@ input {
   .icon {
     padding: 0.5rem;
     font-size: 2rem;
+  }
+
+  .icon:hover {
+    cursor: pointer;
+    color: var(--color-primary);
   }
 
   .footer__logo {
